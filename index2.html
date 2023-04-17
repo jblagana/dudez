@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>!!!</title>
+    <link rel="icon" type="image/png" href="files/skull.png">
+    <style>
+      body {
+        background-color: #2d466b;
+      }
+
+      .dialog-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #e9feff;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+      }
+
+      .input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: rgb(237, 255, 249);
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      /*for background*/
+      .container {
+      display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.emoji {
+			position: absolute;
+			display: block;
+			font-size: 3em;
+			pointer-events: none;
+			user-select: none;
+		}
+
+    </style>
+  </head>
+  <body>
+    <div id="emo" class="container">
+      <span class="emoji">&#x1F600;</span>
+      <span class="emoji">&#x1F601;</span>
+      <span class="emoji">&#x1F602;</span>
+      <span class="emoji">&#x1F603;</span>
+      <span class="emoji">&#x1F604;</span>
+      <span class="emoji">&#x1F605;</span>
+      <span class="emoji">&#x1F606;</span>
+      <span class="emoji">&#x1F607;</span>
+      <span class="emoji">&#x1F608;</span>
+      <span class="emoji">&#x1F609;</span>
+      <span class="emoji">&#x1F60A;</span>
+      <span class="emoji">&#127820;</span>
+      <span class="emoji">&#127815;</span>
+      <span class="emoji">&#127812;</span>
+      <span class="emoji">&#127839;</span>
+      <span class="emoji">&#127829;</span>
+      <span class="emoji">&#x1F499;</span>
+      <span class="emoji">&#x1F49A;</span>
+      <span class="emoji">&#x1F49D;</span>
+      <span class="emoji">&#x1F495;</span>
+      <span class="emoji">&#128521;</span>
+      <span class="emoji">&#128519;</span>
+      <span class="emoji">&#129392;</span>
+      <span class="emoji">&#128525;</span>
+      <span class="emoji">&#129321;</span>
+      <span class="emoji">&#128536;</span>
+      <span class="emoji">&#128538;</span>
+      <span class="emoji">&#129322;</span>
+      <span class="emoji">&#129303;</span>
+      <span class="emoji">&#128564;</span>
+      <span class="emoji">&#129397;</span>
+      <span class="emoji">&#128584;</span>
+      <span class="emoji">&#128571;</span>
+      <span class="emoji">&#128125;</span>
+      <span class="emoji">&#128169;</span>
+      <span class="emoji">&#128557;</span>
+      <span class="emoji">&#x1F600;</span>
+      <span class="emoji">&#x1F601;</span>
+      <span class="emoji">&#x1F602;</span>
+      <span class="emoji">&#x1F603;</span>
+      <span class="emoji">&#x1F604;</span>
+      <span class="emoji">&#x1F605;</span>
+      <span class="emoji">&#x1F606;</span>
+      <span class="emoji">&#x1F607;</span>
+      <span class="emoji">&#x1F608;</span>
+      <span class="emoji">&#x1F609;</span>
+      <span class="emoji">&#x1F60A;</span>
+      <span class="emoji">&#127820;</span>
+      <span class="emoji">&#127815;</span>
+      <span class="emoji">&#127812;</span>
+      <span class="emoji">&#127839;</span>
+      <span class="emoji">&#127829;</span>
+      <span class="emoji">&#x1F499;</span>
+      <span class="emoji">&#x1F49A;</span>
+      <span class="emoji">&#x1F49D;</span>
+      <span class="emoji">&#x1F495;</span>
+      <span class="emoji">&#128521;</span>
+      <span class="emoji">&#128519;</span>
+      <span class="emoji">&#129392;</span>
+      <span class="emoji">&#128525;</span>
+      <span class="emoji">&#129321;</span>
+      <span class="emoji">&#128536;</span>
+      <span class="emoji">&#128538;</span>
+      <span class="emoji">&#129322;</span>
+      <span class="emoji">&#129303;</span>
+      <span class="emoji">&#128564;</span>
+      <span class="emoji">&#129397;</span>
+      <span class="emoji">&#128584;</span>
+      <span class="emoji">&#128571;</span>
+      <span class="emoji">&#128125;</span>
+      <span class="emoji">&#128169;</span>
+      <span class="emoji">&#128557;</span>
+    </div>
+
+
+
+    <div class="dialog-box">
+        <h2 style="font-family: sans-serif">You've hacked my love for you!</h2>
+        <input type="text" id="textInput" class="input" autofocus/>
+      </div>
+
+    <script>
+        var input = document.getElementById("textInput");
+        input.addEventListener("keydown", function(event) {
+          if (event.key === "Enter") {
+            if (input.value === "loveyou") {
+              window.location.href = "dudezDay.html";
+            } else {
+              window.alert("😤😤😤😤😤😤😤");
+            }
+          }
+        });
+
+      /*for background*/
+      const emojis = document.querySelectorAll('.emoji');
+      const container = document.querySelector('.container');
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+      
+      function update() {
+        emojis.forEach((emoji) => {
+          const x = Math.random() * containerWidth;
+          const y = Math.random() * containerHeight;
+          emoji.style.transform = `translate(${x}px, ${y}px)`;
+        });
+      }
+      
+      setInterval(update, 1000/1.2);
+
+      function hideDiv() {
+        var div = document.getElementById("emo");
+        div.style.display = "none";
+        setTimeout(function() {
+          div.style.display = "block";
+        }, 1000/1.2);
+      }
+
+      hideDiv()
+
+      </script>
+  </body>
+</html>
